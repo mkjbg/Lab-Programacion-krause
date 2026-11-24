@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS globant_db;
+USE globant_db;
+
+CREATE TABLE IF NOT EXISTS empleados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    dni INT NOT NULL UNIQUE,
+    cargo VARCHAR(30) NOT NULL,
+    salario DOUBLE NOT NULL,
+    activo BOOLEAN NOT NULL DEFAULT TRUE
+);
